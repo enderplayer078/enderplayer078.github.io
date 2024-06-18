@@ -1,16 +1,24 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enter Keyword</title>
+    <title>Realtime Chat</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Enter the Keyword</h1>
-    <form action="chat.html" method="get">
-        <label for="keyword">Keyword:</label>
-        <input type="text" id="keyword" name="keyword" required>
-        <button type="submit">Go to Chat</button>
-    </form>
+    <div id="app">
+        <div id="input-page" class="page">
+            <input type="text" id="input-text" placeholder="Type 'Test'">
+            <button onclick="submitText()">Submit</button>
+        </div>
+        <div id="chat-page" class="page" style="display: none;">
+            <div id="chat-box"></div>
+            <input type="text" id="message-text" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
